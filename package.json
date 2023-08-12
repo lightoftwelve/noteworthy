@@ -1,14 +1,16 @@
 {
-  "name": "note-taker",
+  "name": "noteworthy",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
-  "author": "Victoria Alawi - Light of Twelve - www.lightoftwelve.com | Credits to EdX & University of Toronto for the files included in the public folder as starter code for the project for the purposes of this assignment",
+  "author": "Victoria Alawi - Light of Twelve - www.lightoftwelve.com | This project was accepted and completed as part of the UofT SCS Coding Boot Camp Online: Fullstack Flex PT course through the University of Toronto. The contents of the public folder was created by edX Boot Camps LLC. and has been modified for the purpose of this assignment. Otherwise, this project was independently developed by myself, Victoria Alawi.",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "jest": "^29.6.2",
+    "uuid": "^9.0.0"
   },
   "keywords": [],
   "description": ""
