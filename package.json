@@ -1,0 +1,15 @@
+{
+  "name": "note-taker",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Victoria Alawi - Light of Twelve - www.lightoftwelve.com | Credits to EdX & University of Toronto for the files included in the public folder as starter code for the project for the purposes of this assignment",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "keywords": [],
+  "description": ""
+}
