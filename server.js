@@ -20,7 +20,7 @@ app.get('/', (req, res) =>
 
 // Route to serve the notes page
 app.get('/notes', (req, res) =>
-    res.sentFile(path.join(__dirname, '/public/notes.html'))
+    res.sendFile(path.join(__dirname, '/public/notes.html'))
 );
 
 // Start the server on the specified port and log the URL

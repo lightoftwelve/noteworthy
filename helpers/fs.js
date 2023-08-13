@@ -3,7 +3,7 @@ const fs = require('fs').promises; // Importing the promises version of the fs m
 // Asynchronous function to read notes from the db.json file
 async function readNotes() {
     try {
-        const data = await fs.readFile('./db/db.json', 'uft8'); // Read the file content from db.json and parse it as a UTF-8 string
+        const data = await fs.readFile('./db/db.json', 'utf8'); // Read the file content from db.json and parse it as a UTF-8 string
         return JSON.parse(data); // Parse the JSON string into a JavaScript object/array and return it
     } catch (err) {
         console.error('Error reading the file:', err); // Log any error that might occur during reading and parsing
