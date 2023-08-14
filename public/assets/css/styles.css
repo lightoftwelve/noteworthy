@@ -5,9 +5,13 @@ body {
   padding: 0;
 }
 
-.save-note {
-  display: none;
-}
+/* .save-note,
+.new-note {
+  font-size: 24px;
+  margin-left: 15px;
+  cursor: pointer;
+} */
+
 
 .icons i {
   margin-left: 15px;

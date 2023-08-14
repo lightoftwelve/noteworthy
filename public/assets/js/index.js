@@ -4,10 +4,19 @@ let saveNoteBtn;
 let newNoteBtn;
 let noteList;
 
+// document.querySelector('.save-note').addEventListener('click', () => {
+//   console.log("Save button clicked directly!");
+// });
+// document.querySelector('.new-note').addEventListener('click', () => {
+//   console.log("New note button clicked directly!");
+// });
+
+
 if (window.location.pathname === '/notes') {
+  console.log("We are on the notes page!");
   noteTitle = document.querySelector('.note-title');
   noteText = document.querySelector('.note-textarea');
-  saveNoteBtn = document.querySelector('.save-note');
+  document.querySelector('.save-note').addEventListener('click', handleNoteSave);
   newNoteBtn = document.querySelector('.new-note');
   noteList = document.querySelectorAll('.list-container .list-group');
 }
@@ -26,7 +35,7 @@ const hide = (elem) => {
 let activeNote = {};
 
 const getNotes = () =>
-  fetch('http://127.0.0.1:3001/api/notes', {
+  fetch(`http://localhost:3001/api/notes/`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -34,7 +43,7 @@ const getNotes = () =>
   });
 
 const saveNote = (note) =>
-  fetch('http://127.0.0.1:3001/api/notes', {
+  fetch(`http://localhost:3001/api/notes/`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -43,7 +52,7 @@ const saveNote = (note) =>
   });
 
 const deleteNote = (id) =>
-  fetch(`http://127.0.0.1:3001/api/notes${id}`, {
+  fetch(`http://localhost:3001/api/notes/${id}`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
@@ -66,16 +75,26 @@ const renderActiveNote = () => {
   }
 };
 
-const handleNoteSave = () => {
+const handleNoteSave = async () => {
+  console.log("Inside handleNoteSave");
+
   const newNote = {
     title: noteTitle.value,
     text: noteText.value,
   };
-  saveNote(newNote).then(() => {
-    getAndRenderNotes();
-    renderActiveNote();
-  });
+  console.log("New note:", newNote);
+
+  if (window.location.pathname === '/notes') {
+    console.log("Attempting to save the note...");
+    const response = await saveNote(newNote);
+    const data = await response.json();
+    console.log("Save Note Response:", data);
+  }
 };
+
+document.querySelector('.save-note').addEventListener('click', () => {
+  console.log("Direct click listener on save-note button.");
+});
 
 // Delete the clicked note
 const handleNoteDelete = (e) => {

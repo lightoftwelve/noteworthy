@@ -1,6 +1,6 @@
 // Required libraries for testing and setting up test environment
 const request = require('supertest'); // Library for testing HTTP requests/responses
-const express = require('express');   // Express server framework
+const express = require('express'); // Express server framework
 const notesRouter = require('./notesRoutes');  // The notes route definitions
 
 // Set up an express instance and configure it for testing
