@@ -28,7 +28,7 @@ notesRouter.post('/', async (req, res) => {
         const createNote = {
             title,
             text,
-            noteId: uuid(), // Generating a unique ID for the new note
+            id: uuid(), // Generating a unique ID for the new note
         };
 
         try {
@@ -58,7 +58,7 @@ notesRouter.post('/', async (req, res) => {
 notesRouter.delete('/:id', async (req, res) => {
     try {
         const notes = await readNotes(); // Read the current notes from the database.
-        const filteredNotes = notes.filter(note => note.noteId !== req.params.id); // Filter the array to exclude the note with the given ID.
+        const filteredNotes = notes.filter(note => note.id !== req.params.id); // Filter the array to exclude the note with the given ID.
 
         if (notes.length === filteredNotes.length) {
             // If the note cannot be found, it cant be deleted
