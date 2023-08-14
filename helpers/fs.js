@@ -7,7 +7,7 @@ async function readNotes() {
         return JSON.parse(data); // Parse the JSON string into a JavaScript object/array and return it
     } catch (err) {
         console.error('Error reading the file:', err); // Log any error that might occur during reading and parsing
-        return []; // Return an empty array if there is an error
+        throw new Error('Error reading the notes from the database.');
     }
 }
 
@@ -17,6 +17,7 @@ async function writeNotes(notesArray) {
         await fs.writeFile('./db/db.json', JSON.stringify(notesArray, null, 2)); // Converts notesArray into a nicely formatted JSON string and writes it to db.json. The 'null' in JSON.stringify is a replacer function, but since we're not altering the stringification process, it's set to null. '2' specifies the number of spaces to use for indentation when formatting the JSON string.
     } catch (err) {
         console.error("Error writing to the file:", err); // Log any error that might occur during writing
+        throw new Error('Error writing notes to the database.');
     }
 }
 

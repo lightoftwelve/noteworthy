@@ -8,10 +8,14 @@
   "author": "Victoria Alawi - Light of Twelve - www.lightoftwelve.com | This project was accepted and completed as part of the UofT SCS Coding Boot Camp Online: Fullstack Flex PT course through the University of Toronto. The contents of the public folder was created by edX Boot Camps LLC. and has been modified for the purpose of this assignment. Otherwise, this project was independently developed by myself, Victoria Alawi.",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.16.4",
-    "jest": "^29.6.2",
     "uuid": "^9.0.0"
   },
   "keywords": [],
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "jest": "^29.6.2",
+    "supertest": "^6.3.3"
+  }
 }
