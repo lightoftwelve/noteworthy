@@ -17,13 +17,13 @@ app.use('/api', api); // Middleware for API routes
 
 // Route to serve the landing page
 app.get('/', (req, res) =>
-    res.sendFile(path.join(__dirname, '/public/index.html'))
+    res.sendFile(path.join(__dirname, '/index.html'))
 );
 
 // Route to serve the notes page
 app.get('/notes', (req, res) => {
     console.log("Trying to access /notes");
-    res.sendFile(path.join(__dirname, '/public/notes.html'));
+    res.sendFile(path.join(__dirname, '/notes.html'));
 });
 
 // Central Error Handling Middleware
