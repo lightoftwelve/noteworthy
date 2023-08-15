@@ -6,6 +6,7 @@ Noteworthy is a modern note-taking application designed to capture and organize 
 ## Table of Contents
 - [Features](#features)
 - [Usage Guide](#usage-guide)
+- [Screenshots](#screenshots)
 - [Technologies Used](#technologies-used)
 - [Live Demo](#live-demo)
 - [Credits](#credits)
@@ -26,6 +27,12 @@ Noteworthy is a modern note-taking application designed to capture and organize 
 3. Create a Note: Click the "Write" icon to get started with a new note. As you type, a "Save" icon appears for quick saving.
 4. Editing and Organizing: Click on any existing note to view or edit. Once changes are made, the save icon lets you update instantly.
 5. Deletion: For any note you wish to remove, an optional delete functionality lets you keep your notes list clutter-free.
+
+## Screenshots
+![Landing page of noteworthy with a button to enter the app](./public/assets/images/Noteworthy-screenshots-1.png)
+![Noteworthy dashboard with a column on the left and one on the right](./public/assets/images/Noteworthy-screenshots-2.png)
+![Noteworthy dashboard with an example of a note being filled in with saved notes in left column](./public/assets/images/Noteworthy-screenshots-3.png)
+![Noteworthy dashboard with an example of a note being filled in with saved notes in left column](./public/assets/images/Noteworthy-screenshots-4.png)
 
 ## Technologies Used
 - Frontend: HTML, CSS, and JavaScript
