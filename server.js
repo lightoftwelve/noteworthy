@@ -22,8 +22,12 @@ app.get('/', (req, res) =>
 
 // Route to serve the notes page
 app.get('/notes', (req, res) => {
-    console.log("Trying to access /notes");
     res.sendFile(path.join(__dirname, '/public/notes.html'));
+});
+
+// Wildcard returns index.html
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '/public/index.html'))
 });
 
 // Central Error Handling Middleware
