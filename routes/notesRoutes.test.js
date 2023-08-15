@@ -27,10 +27,10 @@ describe('Notes API', () => {
         expect(res.body.body).toHaveProperty('title', newNote.title); // Expecting the response to contain the title of the new note
 
         // Get the ID of the newly created note
-        const noteId = res.body.body.noteId;
+        const id = res.body.body.id;
 
         // Delete the note using the fetched ID
-        res = await request(app).delete(`/api/notes/${noteId}`);
+        res = await request(app).delete(`/api/notes/${id}`);
         expect(res.statusCode).toEqual(200);
         expect(res.body).toHaveProperty('status', 'Success');
     });
