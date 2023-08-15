@@ -34,8 +34,7 @@ Noteworthy is a modern note-taking application designed to capture and organize 
 - API Integration: Custom routes (GET, POST, DELETE) to interact with notes, providing a seamless user experience.
 
 ## Live Demo
-// Not Live Yet
-Check out the live version of this project [here](https://github.com/lightoftwelve/noteworthy). 
+Check out the live version of this project [here](https://noteworthy-era-app-dcb765776495.herokuapp.com/). 
 
 ## Credits
 This project was accepted and completed as part of the UofT SCS Coding Boot Camp Online: Fullstack Flex PT course through the University of Toronto. The contents of the public folder was created by edX Boot Camps LLC. and has been modified for the purpose of this assignment. Otherwise, this project was independently developed by myself, Victoria Alawi.
